@@ -3,7 +3,7 @@
 Submitted by: Roel Crodua
 
 ### About this web app: 
-GroceryList is a customizable grocery planning app that lets users build personalized shopping lists by selecting items from a catalog, adjusting quantities and units, adding custom labels and notes, and seeing their list update with live totals and category-based visuals. Built with React on the frontend and a PostgreSQL-backed Express API on the backend, the app supports full CRUD functionality so users can create, view, edit, and delete grocery lists and list items while exploring a more personalized take on everyday shopping.**
+`GroceryList` is a customizable grocery planning app that lets users build personalized shopping lists by selecting items from a catalog, adjusting quantities and units, adding custom labels and notes, and seeing their list update with live totals and category-based visuals. Built with React on the frontend and a PostgreSQL-backed Express API on the backend, the app supports full CRUD functionality so users can create, view, edit, and delete grocery lists and list items while exploring a more personalized take on everyday shopping.**
 
 Time spent: 10 hours
 
@@ -18,7 +18,7 @@ The following **required** functionality is completed:
   - [x]  **NOTE: Your walkthrough added to the README must include a demonstration of your table contents. Use the psql command 'SELECT * FROM tablename;' to display your table contents.**
 - [x] **Users can view **multiple** features of the `CustomItem` (e.g. car) they can customize, (e.g. wheels, exterior, etc.)**
 - [x] **Each customizable feature has multiple options to choose from (e.g. exterior could be red, blue, black, etc.)**
-- [ ] **On selecting each option, the displayed visual icon for the `CustomItem` updates to match the option the user chose.**
+- [x] **On selecting each option, the displayed visual icon for the `CustomItem` updates to match the option the user chose.**
 - [x] **The price of the `CustomItem` (e.g. car) changes dynamically as different options are selected *OR* The app displays the total price of all features.**
 - [x] **The visual interface changes in response to at least one customizable feature.**
 - [x] **The user can submit their choices to save the item to the list of created `CustomItem`s.**
@@ -41,14 +41,22 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/roeldcrodua/GroceryList/blob/master/assets/demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-<!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  GIF tool here
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+## Database Walkthrough Evidence
+
+```sql
+SELECT * FROM events;
+SELECT * FROM grocery_lists;
+SELECT * FROM list_members;
+SELECT * FROM items;
+SELECT * FROM categories;
+SELECT * FROM list_items;
+```
+
+<img src='https://github.com/roeldcrodua/GroceryList/blob/master/assets/demo1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+GIF created with Wondershare Uniconverter 17 Tool - GIF Maker
 
 ## Notes
 
