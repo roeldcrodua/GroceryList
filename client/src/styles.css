@@ -1,0 +1,346 @@
+:root {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #1f1a16;
+  background:
+    radial-gradient(circle at top left, rgba(252, 220, 173, 0.55), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(154, 208, 193, 0.42), transparent 34%),
+    #f7f2e8;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-size: 0.95rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(60, 48, 38, 0.18);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.shell {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.75rem;
+  border-radius: 30px;
+  background-image:
+    linear-gradient(135deg, rgba(50, 80, 42, 0.78), rgba(113, 63, 29, 0.72)),
+    url('https://img.freepik.com/premium-psd/grocery-banner-design_1004676-627.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff8ef;
+  box-shadow: 0 20px 45px rgba(93, 66, 31, 0.2);
+}
+
+.brand {
+  display: inline-block;
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.06em;
+}
+
+.hero-copy {
+  max-width: 42rem;
+  margin-bottom: 0;
+}
+
+.nav {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.nav-link,
+.button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.8rem 1.2rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-link {
+  background: rgba(255, 248, 239, 0.16);
+}
+
+.nav-link.active {
+  background: rgba(255, 248, 239, 0.28);
+}
+
+.button:hover,
+.nav-link:hover {
+  transform: translateY(-1px);
+}
+
+.button.primary {
+  background: #1d5f4f;
+  color: #fffaf5;
+}
+
+.button.secondary {
+  background: #efe3d0;
+  color: #473425;
+}
+
+.button.ghost {
+  background: rgba(71, 52, 37, 0.08);
+  color: #473425;
+}
+
+.button.danger {
+  background: #8c3f32;
+  color: #fff6f2;
+}
+
+.main-content {
+  margin-top: 1.75rem;
+}
+
+.page-grid,
+.stack {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: end;
+}
+
+.page-header.compact {
+  align-items: start;
+}
+
+.card,
+.inline-card {
+  background: rgba(255, 250, 245, 0.88);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(72, 52, 33, 0.08);
+  border-radius: 24px;
+  padding: 1.35rem;
+  box-shadow: 0 16px 36px rgba(82, 64, 42, 0.09);
+}
+
+.accent-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(248, 239, 226, 0.88));
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+}
+
+.list-card {
+  display: grid;
+  gap: 1rem;
+}
+
+.stat-grid,
+.summary-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.75rem;
+}
+
+.stat-label,
+.meta,
+.eyebrow,
+.muted {
+  color: #6f6256;
+}
+
+.eyebrow,
+.meta {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+}
+
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.two-column-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+  gap: 1.25rem;
+}
+
+.summary-panel {
+  align-self: start;
+  position: sticky;
+  top: 1.5rem;
+}
+
+.chip-stack {
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.category-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.category-pill--produce {
+  background-color: #d9f0d1;
+  color: #5a9a52;
+}
+
+.category-pill--dairy {
+  background-color: #dde9fb;
+  color: #4978b8;
+}
+
+.category-pill--meat {
+  background-color: #fde2da;
+  color: #b85c4a;
+}
+
+.category-pill--bakery {
+  background-color: #f9e7c8;
+  color: #b48342;
+}
+
+.category-pill--pantry {
+  background-color: #ebe1fb;
+  color: #7454b3;
+}
+
+.category-pill--frozen {
+  background-color: #daf3fb;
+  color: #3f90aa;
+}
+
+.category-pill--beverages {
+  background-color: #d8f7ef;
+  color: #2f8d77;
+}
+
+.category-pill--default {
+  background-color: #ececec;
+  color: #333333;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.field-span {
+  grid-column: 1 / -1;
+}
+
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: start;
+  margin-bottom: 1rem;
+}
+
+.inline-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.error-banner {
+  margin: 0;
+  padding: 0.9rem 1rem;
+  border-radius: 16px;
+  background: rgba(176, 63, 57, 0.12);
+  color: #7e261f;
+}
+
+.narrow {
+  max-width: 640px;
+}
+
+.form-card {
+  display: grid;
+  gap: 1rem;
+}
+
+.checkbox-row {
+  flex-direction: row;
+  align-items: center;
+}
+
+.empty-state {
+  text-align: center;
+  padding-block: 3rem;
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .page-header,
+  .editor-header,
+  .inline-card,
+  .two-column-layout {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .summary-panel {
+    position: static;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
